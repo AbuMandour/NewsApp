@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0402CC1AC6912A696F38F139 /* libPods-NewsApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 435D2824AF6348EDB75FBCE7 /* libPods-NewsApp.a */; };
+		AC6F9D58DD8234D5625A5A40 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF74E4D62C0C7CC79B7FDB1 /* Pods_NewsApp.framework */; };
 		EA66918124B213060085210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66918024B213060085210A /* AppDelegate.swift */; };
 		EA66918324B213060085210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66918224B213060085210A /* SceneDelegate.swift */; };
 		EA66918524B213060085210A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66918424B213060085210A /* HomeViewController.swift */; };
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		424E310FE1E4428EA6AD36C6 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
-		435D2824AF6348EDB75FBCE7 /* libPods-NewsApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BF74E4D62C0C7CC79B7FDB1 /* Pods_NewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCB5F827C150A7AD10A4A38 /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EA66917D24B213060085210A /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA66918024B213060085210A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0402CC1AC6912A696F38F139 /* libPods-NewsApp.a in Frameworks */,
+				AC6F9D58DD8234D5625A5A40 /* Pods_NewsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +66,7 @@
 		A1ACF35346910F8C57BE7666 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				435D2824AF6348EDB75FBCE7 /* libPods-NewsApp.a */,
+				7BF74E4D62C0C7CC79B7FDB1 /* Pods_NewsApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,6 +208,7 @@
 				EA66917924B213060085210A /* Sources */,
 				EA66917A24B213060085210A /* Frameworks */,
 				EA66917B24B213060085210A /* Resources */,
+				2FD7ACF29A31F3CAE40EFAC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +286,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FD7ACF29A31F3CAE40EFAC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewsApp/Pods-NewsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewsApp/Pods-NewsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewsApp/Pods-NewsApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
