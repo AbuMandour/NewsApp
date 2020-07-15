@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AC6F9D58DD8234D5625A5A40 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF74E4D62C0C7CC79B7FDB1 /* Pods_NewsApp.framework */; };
+		EA3FE70A24BE18E5009F20F5 /* CoronaDataApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FE70924BE18E5009F20F5 /* CoronaDataApi.swift */; };
+		EA3FE70C24BE23E4009F20F5 /* CoronaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FE70B24BE23E4009F20F5 /* CoronaDataModel.swift */; };
+		EA3FE70E24BF3A0A009F20F5 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FE70D24BF3A0A009F20F5 /* BaseService.swift */; };
 		EA66918124B213060085210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66918024B213060085210A /* AppDelegate.swift */; };
 		EA66918324B213060085210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66918224B213060085210A /* SceneDelegate.swift */; };
 		EA66918524B213060085210A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66918424B213060085210A /* HomeViewController.swift */; };
@@ -20,12 +23,17 @@
 		EA8C418924B22CA400BE2684 /* AppUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C418824B22CA400BE2684 /* AppUrls.swift */; };
 		EA8C418B24B22D4D00BE2684 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C418A24B22D4D00BE2684 /* MenuModel.swift */; };
 		EA8C418D24B22DB300BE2684 /* HomeRepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C418C24B22DB300BE2684 /* HomeRepoService.swift */; };
+		EA8C418F24B23DD200BE2684 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C418E24B23DD200BE2684 /* HomeService.swift */; };
+		EA8C419124B23E9200BE2684 /* ExtentionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		424E310FE1E4428EA6AD36C6 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 		7BF74E4D62C0C7CC79B7FDB1 /* Pods_NewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCB5F827C150A7AD10A4A38 /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EA3FE70924BE18E5009F20F5 /* CoronaDataApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaDataApi.swift; sourceTree = "<group>"; };
+		EA3FE70B24BE23E4009F20F5 /* CoronaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaDataModel.swift; sourceTree = "<group>"; };
+		EA3FE70D24BF3A0A009F20F5 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		EA66917D24B213060085210A /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA66918024B213060085210A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA66918224B213060085210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +48,8 @@
 		EA8C418824B22CA400BE2684 /* AppUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUrls.swift; sourceTree = "<group>"; };
 		EA8C418A24B22D4D00BE2684 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		EA8C418C24B22DB300BE2684 /* HomeRepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepoService.swift; sourceTree = "<group>"; };
+		EA8C418E24B23DD200BE2684 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionsFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,7 @@
 			children = (
 				EA66918024B213060085210A /* AppDelegate.swift */,
 				EA66918224B213060085210A /* SceneDelegate.swift */,
+				EA3FE70D24BF3A0A009F20F5 /* BaseService.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 			children = (
 				EA8C418124B2293100BE2684 /* HomeModel.swift */,
 				EA8C418A24B22D4D00BE2684 /* MenuModel.swift */,
+				EA3FE70B24BE23E4009F20F5 /* CoronaDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +161,7 @@
 			children = (
 				EA8C418324B2297E00BE2684 /* HomeApi.swift */,
 				EA8C418524B22C0E00BE2684 /* MenuApi.swift */,
+				EA3FE70924BE18E5009F20F5 /* CoronaDataApi.swift */,
 			);
 			path = Transitionals;
 			sourceTree = "<group>";
@@ -156,6 +169,7 @@
 		EA8C417C24B2281F00BE2684 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EA8C418E24B23DD200BE2684 /* HomeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -185,6 +199,7 @@
 		EA8C418024B2288D00BE2684 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -316,7 +331,12 @@
 				EA8C418424B2297E00BE2684 /* HomeApi.swift in Sources */,
 				EA8C418224B2293100BE2684 /* HomeModel.swift in Sources */,
 				EA8C418D24B22DB300BE2684 /* HomeRepoService.swift in Sources */,
+				EA3FE70E24BF3A0A009F20F5 /* BaseService.swift in Sources */,
+				EA3FE70A24BE18E5009F20F5 /* CoronaDataApi.swift in Sources */,
+				EA8C418F24B23DD200BE2684 /* HomeService.swift in Sources */,
 				EA66918524B213060085210A /* HomeViewController.swift in Sources */,
+				EA8C419124B23E9200BE2684 /* ExtentionsFile.swift in Sources */,
+				EA3FE70C24BE23E4009F20F5 /* CoronaDataModel.swift in Sources */,
 				EA66918124B213060085210A /* AppDelegate.swift in Sources */,
 				EA8C418924B22CA400BE2684 /* AppUrls.swift in Sources */,
 				EA66918324B213060085210A /* SceneDelegate.swift in Sources */,

@@ -15,21 +15,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpF-rG-6YN">
-                                <rect key="frame" x="168" y="438" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoQ-Mm-CS8">
+                                <rect key="frame" x="173" y="433" width="68" height="30"/>
+                                <state key="normal" title="PickVideo">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickVideoClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ytF-RF-YjU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb7-yx-cPb">
+                                <rect key="frame" x="207" y="398" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGD-ww-p0c" userLabel="Last Query Date Label">
+                                <rect key="frame" x="207" y="348" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JGD-ww-p0c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="LVY-nL-nOz"/>
+                            <constraint firstItem="qb7-yx-cPb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qkc-dk-Kv4"/>
+                            <constraint firstItem="HoQ-Mm-CS8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b5k-H4-BXT"/>
+                            <constraint firstItem="JGD-ww-p0c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kar-RK-Cku"/>
+                            <constraint firstItem="HoQ-Mm-CS8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rC2-3r-ph1"/>
+                            <constraint firstItem="qb7-yx-cPb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="zf7-d9-pzX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="autoUpdatedLabel" destination="qb7-yx-cPb" id="pw7-vK-Sjw"/>
+                        <outlet property="lastQueryDateLabel" destination="JGD-ww-p0c" id="HMA-30-Vvr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="61" y="52"/>
         </scene>
     </scenes>
 </document>
