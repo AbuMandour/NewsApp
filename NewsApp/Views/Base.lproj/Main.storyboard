@@ -15,47 +15,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoQ-Mm-CS8">
-                                <rect key="frame" x="173" y="433" width="68" height="30"/>
-                                <state key="normal" title="PickVideo">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="pickVideoClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ytF-RF-YjU"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb7-yx-cPb">
-                                <rect key="frame" x="207" y="398" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGD-ww-p0c" userLabel="Last Query Date Label">
-                                <rect key="frame" x="207" y="348" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Kam-QS-pte" userLabel="CoronaStackView">
+                                <rect key="frame" x="0.0" y="64" width="414" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No calls yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGD-ww-p0c" userLabel="Last Query Date Label">
+                                        <rect key="frame" x="162.5" y="0.0" width="89" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb7-yx-cPb">
+                                        <rect key="frame" x="202" y="35.5" width="10.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oPd-wo-lWn" userLabel="PickVideoStackView">
+                                <rect key="frame" x="171" y="135" width="72" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoQ-Mm-CS8">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <color key="backgroundColor" red="0.24313725489999999" green="0.36078431370000003" blue="0.60392156860000001" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title=" PickVideo">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickVideoClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ytF-RF-YjU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DGZ-xI-VVz" customClass="ExpandableTableView" customModule="ExpandableCell">
+                                <rect key="frame" x="0.0" y="180" width="414" height="682"/>
+                                <sections/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="JGD-ww-p0c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="LVY-nL-nOz"/>
-                            <constraint firstItem="qb7-yx-cPb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qkc-dk-Kv4"/>
-                            <constraint firstItem="HoQ-Mm-CS8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b5k-H4-BXT"/>
-                            <constraint firstItem="JGD-ww-p0c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kar-RK-Cku"/>
-                            <constraint firstItem="HoQ-Mm-CS8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rC2-3r-ph1"/>
-                            <constraint firstItem="qb7-yx-cPb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="zf7-d9-pzX"/>
+                            <constraint firstItem="oPd-wo-lWn" firstAttribute="top" secondItem="Kam-QS-pte" secondAttribute="bottom" constant="15" id="0Vi-jc-yNn"/>
+                            <constraint firstItem="Kam-QS-pte" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AjP-vd-0mF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DGZ-xI-VVz" secondAttribute="trailing" id="KfH-OP-9TR"/>
+                            <constraint firstItem="oPd-wo-lWn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MlG-so-JFJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DGZ-xI-VVz" secondAttribute="bottom" id="aEH-Im-oO9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kam-QS-pte" secondAttribute="trailing" id="g6V-lb-Y22"/>
+                            <constraint firstItem="DGZ-xI-VVz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hRT-Tg-6sp"/>
+                            <constraint firstItem="Kam-QS-pte" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nBB-RN-nKI"/>
+                            <constraint firstItem="DGZ-xI-VVz" firstAttribute="top" secondItem="oPd-wo-lWn" secondAttribute="bottom" constant="15" id="wHB-uT-xo1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="autoUpdatedLabel" destination="qb7-yx-cPb" id="pw7-vK-Sjw"/>
+                        <outlet property="expandableTableView" destination="DGZ-xI-VVz" id="NNH-FX-x9H"/>
                         <outlet property="lastQueryDateLabel" destination="JGD-ww-p0c" id="HMA-30-Vvr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="52"/>
+            <point key="canvasLocation" x="60.869565217391312" y="51.5625"/>
         </scene>
     </scenes>
 </document>

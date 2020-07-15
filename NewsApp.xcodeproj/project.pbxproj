@@ -11,6 +11,7 @@
 		EA3FE70A24BE18E5009F20F5 /* CoronaDataApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FE70924BE18E5009F20F5 /* CoronaDataApi.swift */; };
 		EA3FE70C24BE23E4009F20F5 /* CoronaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FE70B24BE23E4009F20F5 /* CoronaDataModel.swift */; };
 		EA3FE70E24BF3A0A009F20F5 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FE70D24BF3A0A009F20F5 /* BaseService.swift */; };
+		EA3FE71224BF588A009F20F5 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3FE71124BF588A009F20F5 /* CategoryModel.swift */; };
 		EA66918124B213060085210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66918024B213060085210A /* AppDelegate.swift */; };
 		EA66918324B213060085210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66918224B213060085210A /* SceneDelegate.swift */; };
 		EA66918524B213060085210A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66918424B213060085210A /* HomeViewController.swift */; };
@@ -25,6 +26,10 @@
 		EA8C418D24B22DB300BE2684 /* HomeRepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C418C24B22DB300BE2684 /* HomeRepoService.swift */; };
 		EA8C418F24B23DD200BE2684 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C418E24B23DD200BE2684 /* HomeService.swift */; };
 		EA8C419124B23E9200BE2684 /* ExtentionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */; };
+		EACC6A8624BF5D7700949006 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC6A8424BF5D7700949006 /* CategoryCell.swift */; };
+		EACC6A8724BF5D7700949006 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACC6A8524BF5D7700949006 /* CategoryCell.xib */; };
+		EACC6A8A24BF746C00949006 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC6A8824BF746C00949006 /* ItemCell.swift */; };
+		EACC6A8B24BF746C00949006 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACC6A8924BF746C00949006 /* ItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,7 @@
 		EA3FE70924BE18E5009F20F5 /* CoronaDataApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaDataApi.swift; sourceTree = "<group>"; };
 		EA3FE70B24BE23E4009F20F5 /* CoronaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaDataModel.swift; sourceTree = "<group>"; };
 		EA3FE70D24BF3A0A009F20F5 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		EA3FE71124BF588A009F20F5 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		EA66917D24B213060085210A /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA66918024B213060085210A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA66918224B213060085210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +56,10 @@
 		EA8C418C24B22DB300BE2684 /* HomeRepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepoService.swift; sourceTree = "<group>"; };
 		EA8C418E24B23DD200BE2684 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionsFile.swift; sourceTree = "<group>"; };
+		EACC6A8424BF5D7700949006 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		EACC6A8524BF5D7700949006 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		EACC6A8824BF746C00949006 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		EACC6A8924BF746C00949006 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +142,7 @@
 		EA8C417824B2275200BE2684 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EACC6A7F24BF5C5E00949006 /* ViewCells */,
 				EA66918624B213060085210A /* Main.storyboard */,
 				EA66918B24B213080085210A /* LaunchScreen.storyboard */,
 			);
@@ -152,6 +163,7 @@
 				EA8C418124B2293100BE2684 /* HomeModel.swift */,
 				EA8C418A24B22D4D00BE2684 /* MenuModel.swift */,
 				EA3FE70B24BE23E4009F20F5 /* CoronaDataModel.swift */,
+				EA3FE71124BF588A009F20F5 /* CategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +222,17 @@
 				EA8C418824B22CA400BE2684 /* AppUrls.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		EACC6A7F24BF5C5E00949006 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EACC6A8824BF746C00949006 /* ItemCell.swift */,
+				EACC6A8924BF746C00949006 /* ItemCell.xib */,
+				EACC6A8424BF5D7700949006 /* CategoryCell.swift */,
+				EACC6A8524BF5D7700949006 /* CategoryCell.xib */,
+			);
+			path = ViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACC6A8724BF5D7700949006 /* CategoryCell.xib in Resources */,
 				EA66918D24B213080085210A /* LaunchScreen.storyboard in Resources */,
+				EACC6A8B24BF746C00949006 /* ItemCell.xib in Resources */,
 				EA66918A24B213080085210A /* Assets.xcassets in Resources */,
 				EA66918824B213060085210A /* Main.storyboard in Resources */,
 			);
@@ -327,10 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACC6A8624BF5D7700949006 /* CategoryCell.swift in Sources */,
 				EA8C418B24B22D4D00BE2684 /* MenuModel.swift in Sources */,
 				EA8C418424B2297E00BE2684 /* HomeApi.swift in Sources */,
 				EA8C418224B2293100BE2684 /* HomeModel.swift in Sources */,
 				EA8C418D24B22DB300BE2684 /* HomeRepoService.swift in Sources */,
+				EACC6A8A24BF746C00949006 /* ItemCell.swift in Sources */,
 				EA3FE70E24BF3A0A009F20F5 /* BaseService.swift in Sources */,
 				EA3FE70A24BE18E5009F20F5 /* CoronaDataApi.swift in Sources */,
 				EA8C418F24B23DD200BE2684 /* HomeService.swift in Sources */,
@@ -338,6 +365,7 @@
 				EA8C419124B23E9200BE2684 /* ExtentionsFile.swift in Sources */,
 				EA3FE70C24BE23E4009F20F5 /* CoronaDataModel.swift in Sources */,
 				EA66918124B213060085210A /* AppDelegate.swift in Sources */,
+				EA3FE71224BF588A009F20F5 /* CategoryModel.swift in Sources */,
 				EA8C418924B22CA400BE2684 /* AppUrls.swift in Sources */,
 				EA66918324B213060085210A /* SceneDelegate.swift in Sources */,
 				EA8C418624B22C0E00BE2684 /* MenuApi.swift in Sources */,

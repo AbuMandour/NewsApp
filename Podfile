@@ -11,5 +11,6 @@ target 'NewsApp' do
 	pod 'Kingfisher'
 
 	pod 'AlamofireObjectMapper', :git => 'https://github.com/RomanPodymov/AlamofireObjectMapper.git', :branch => 'xcode-10-2-fix'
-
+	
+	pod 'ExpandableCell'
 end
