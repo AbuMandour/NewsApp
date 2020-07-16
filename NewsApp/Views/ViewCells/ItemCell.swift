@@ -13,7 +13,7 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var itemTextLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // Initialization code        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

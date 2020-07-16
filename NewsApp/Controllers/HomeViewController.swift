@@ -13,23 +13,23 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var expandableTableView: UITableView!
     @IBOutlet weak var lastQueryDateLabel: UILabel!
     @IBOutlet weak var autoUpdatedLabel: UILabel!
-    var count: Int = 0
+    
     var categories: [CategoryModel] = [
         CategoryModel("title 1",["item 1,1","item 2,1","item 3,1","item 4,1"],false),
-        CategoryModel("title 2",["item 1,2","item 2,2","item 3,2","item 4,2"],false),
-        CategoryModel("title 3",["item 1,3","item 2,3","item 3,3","item 4,3"],false)]
+        CategoryModel("title 2",["item 1,2","item 2,2","item 3,2"],false),
+        CategoryModel("title 3",["item 1,3","item 2,3","item 3,3","item 4,3", "item 5,3"],false)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         performRepeatedFunction()
         updateData()
-        expandableTableView.rowHeight = UITableView.automaticDimension
-        expandableTableView.estimatedRowHeight = 80
+        setupTable()
+    }
+    func setupTable() {
         expandableTableView.delegate = self
         expandableTableView.dataSource = self
         expandableTableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: "categoryCellIdentifire")
-        
     }
     @IBAction func pickVideoClicked(_ sender: Any) {
         openVideoPicker()
@@ -95,26 +95,7 @@ extension HomeViewController :  UITableViewDelegate , UITableViewDataSource {
         let categoryCell = expandableTableView.dequeueReusableCell(withIdentifier: "categoryCellIdentifire", for: indexPath) as! CategoryCell
         categoryCell.categoryTextLabel.text = categories[indexPath.row].title
         categoryCell.items = categories[indexPath.row].items
+        //categoryCell.innerTableViewHeight.constant = CGFloat(categories[indexPath.row].items.count * 48)
         return categoryCell
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let category = categories[indexPath.row]
-//        if category.opened == false{
-//            category.opened = true
-//        }
-//        else{
-//           category.opened = false
-//        }
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let category = categories[indexPath.row]
-//        if category.opened == false{
-//            return CGFloat(80)
-//        }
-//        else{
-//            return CGFloat(category.items.count * 40 + 80)
-//        }
-//    }
 }
