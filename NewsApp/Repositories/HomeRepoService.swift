@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
+
 class HomeRepoService
 {
     class func getHomeRepo(pageNum : String , completion : @escaping( _ error: Error? , _ success: Bool, _ data :[HomeApi]?)->Void)
