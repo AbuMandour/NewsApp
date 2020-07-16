@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var expandableTableView: UITableView!
     @IBOutlet weak var lastQueryDateLabel: UILabel!
     @IBOutlet weak var autoUpdatedLabel: UILabel!
-    
+    var selectedIndexPathSet : IndexSet = []
     var categories: [CategoryModel] = [
         CategoryModel("title 1",["item 1,1","item 2,1","item 3,1","item 4,1"],false),
         CategoryModel("title 2",["item 1,2","item 2,2","item 3,2"],false),
@@ -44,7 +44,6 @@ class HomeViewController: UIViewController {
             if(error == nil){
 
                 self.autoUpdatedLabel.text = "Total Cases: \(coronaDataModel?.totalCases ?? "0")"
-                print(coronaDataModel?.totalCases! ?? "error found")
                 self.lastQueryDateLabel.text = "Last check date: \(coronaDataModel?.dateTimeNow ?? "no calls made")"
             }
             else{
@@ -92,10 +91,30 @@ extension HomeViewController :  UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let categoryCell = expandableTableView.dequeueReusableCell(withIdentifier: "categoryCellIdentifire", for: indexPath) as! CategoryCell
+        guard let categoryCell = expandableTableView.dequeueReusableCell(withIdentifier: "categoryCellIdentifire", for: indexPath) as? CategoryCell else{
+            print("faild to cast")
+            return CategoryCell()
+        }
         categoryCell.categoryTextLabel.text = categories[indexPath.row].title
-        categoryCell.items = categories[indexPath.row].items
-        //categoryCell.innerTableViewHeight.constant = CGFloat(categories[indexPath.row].items.count * 48)
+        categoryCell.selectionStyle = .none
+        categoryCell.items = self.categories[indexPath.row].items
+        if selectedIndexPathSet.contains(indexPath.row){                
+                categoryCell.innerTableView.isHidden = false
+                categoryCell.innerTableViewHeight.constant = CGFloat(self.categories[indexPath.row].items.count * 48)
+        }
+        else{
+                categoryCell.innerTableView.isHidden = true
+                categoryCell.innerTableViewHeight.constant = CGFloat(1)
+        }
         return categoryCell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if selectedIndexPathSet.contains(indexPath.row){
+            selectedIndexPathSet.remove(indexPath.row)
+        }
+        else{
+            selectedIndexPathSet.insert(indexPath.row)
+        }
+        expandableTableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }

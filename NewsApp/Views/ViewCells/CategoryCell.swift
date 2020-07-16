@@ -14,12 +14,14 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var categoryTextLabel: UILabel!
     @IBOutlet weak var innerTableView: UITableView!
     var items: [String] = [String]()
-    
+    var isCategorySelected: Bool = false
     override func awakeFromNib() {
         super.awakeFromNib()
         innerTableView.delegate = self
         innerTableView.dataSource = self
-        innerTableView.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "itemCellIdentifier")        
+        innerTableView.isHidden = true
+        innerTableViewHeight.constant = CGFloat(1)
+        innerTableView.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "itemCellIdentifier")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
