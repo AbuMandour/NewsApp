@@ -20,7 +20,7 @@ class CategoryCell: UITableViewCell {
         innerTableView.delegate = self
         innerTableView.dataSource = self
         innerTableView.isHidden = true
-        innerTableViewHeight.constant = CGFloat(1)
+        innerTableViewHeight.constant = CGFloat(0)
         innerTableView.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "itemCellIdentifier")
     }
 

@@ -99,8 +99,9 @@ extension HomeViewController :  UITableViewDelegate , UITableViewDataSource {
         categoryCell.selectionStyle = .none
         categoryCell.items = self.categories[indexPath.row].items
         if selectedIndexPathSet.contains(indexPath.row){                
-                categoryCell.innerTableView.isHidden = false
-                categoryCell.innerTableViewHeight.constant = CGFloat(self.categories[indexPath.row].items.count * 48)
+            categoryCell.innerTableView.isHidden = false
+            categoryCell.innerTableView.reloadData()
+            categoryCell.innerTableViewHeight.constant = CGFloat(self.categories[indexPath.row].items.count * 48)
         }
         else{
                 categoryCell.innerTableView.isHidden = true
