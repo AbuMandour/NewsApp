@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3EC63B24C462770043D54E /* ExtStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EC63A24C462770043D54E /* ExtStackView.swift */; };
 		AC6F9D58DD8234D5625A5A40 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF74E4D62C0C7CC79B7FDB1 /* Pods_NewsApp.framework */; };
 		EA23AACC24C097E100C5AE18 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23AACA24C097E100C5AE18 /* CategoryCell.swift */; };
 		EA23AACD24C097E100C5AE18 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA23AACB24C097E100C5AE18 /* CategoryCell.xib */; };
@@ -30,9 +31,15 @@
 		EA8C419124B23E9200BE2684 /* ExtentionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */; };
 		EACC6A8A24BF746C00949006 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC6A8824BF746C00949006 /* ItemCell.swift */; };
 		EACC6A8B24BF746C00949006 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACC6A8924BF746C00949006 /* ItemCell.xib */; };
+		EAD751BE24C4CB2900090A56 /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751BD24C4CB2900090A56 /* OnBoardViewController.swift */; };
+		EAD751C124C4CE0500090A56 /* MenuBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751BF24C4CE0500090A56 /* MenuBarViewCell.swift */; };
+		EAD751C224C4CE0500090A56 /* MenuBarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD751C024C4CE0500090A56 /* MenuBarViewCell.xib */; };
+		EAD751C424C4E55A00090A56 /* ItemOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751C324C4E55A00090A56 /* ItemOneViewController.swift */; };
+		EAD751C624C4EC7200090A56 /* ItemTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751C524C4EC7200090A56 /* ItemTwoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3EC63A24C462770043D54E /* ExtStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtStackView.swift; sourceTree = "<group>"; };
 		424E310FE1E4428EA6AD36C6 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 		7BF74E4D62C0C7CC79B7FDB1 /* Pods_NewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCB5F827C150A7AD10A4A38 /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +67,11 @@
 		EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionsFile.swift; sourceTree = "<group>"; };
 		EACC6A8824BF746C00949006 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		EACC6A8924BF746C00949006 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		EAD751BD24C4CB2900090A56 /* OnBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
+		EAD751BF24C4CE0500090A56 /* MenuBarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewCell.swift; sourceTree = "<group>"; };
+		EAD751C024C4CE0500090A56 /* MenuBarViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuBarViewCell.xib; sourceTree = "<group>"; };
+		EAD751C324C4E55A00090A56 /* ItemOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemOneViewController.swift; sourceTree = "<group>"; };
+		EAD751C524C4EC7200090A56 /* ItemTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTwoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,9 +154,8 @@
 		EA8C417824B2275200BE2684 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EAD751BC24C4CA0B00090A56 /* Storyborads */,
 				EACC6A7F24BF5C5E00949006 /* ViewCells */,
-				EA66918624B213060085210A /* Main.storyboard */,
-				EA66918B24B213080085210A /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				EA66918424B213060085210A /* HomeViewController.swift */,
+				EAD751BD24C4CB2900090A56 /* OnBoardViewController.swift */,
+				EAD751C324C4E55A00090A56 /* ItemOneViewController.swift */,
+				EAD751C524C4EC7200090A56 /* ItemTwoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */,
+				1A3EC63A24C462770043D54E /* ExtStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -231,8 +246,19 @@
 				EACC6A8924BF746C00949006 /* ItemCell.xib */,
 				EA23AACA24C097E100C5AE18 /* CategoryCell.swift */,
 				EA23AACB24C097E100C5AE18 /* CategoryCell.xib */,
+				EAD751BF24C4CE0500090A56 /* MenuBarViewCell.swift */,
+				EAD751C024C4CE0500090A56 /* MenuBarViewCell.xib */,
 			);
 			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		EAD751BC24C4CA0B00090A56 /* Storyborads */ = {
+			isa = PBXGroup;
+			children = (
+				EA66918624B213060085210A /* Main.storyboard */,
+				EA66918B24B213080085210A /* LaunchScreen.storyboard */,
+			);
+			path = Storyborads;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +324,7 @@
 				EA23AACD24C097E100C5AE18 /* CategoryCell.xib in Resources */,
 				EA66918D24B213080085210A /* LaunchScreen.storyboard in Resources */,
 				EACC6A8B24BF746C00949006 /* ItemCell.xib in Resources */,
+				EAD751C224C4CE0500090A56 /* MenuBarViewCell.xib in Resources */,
 				EA66918A24B213080085210A /* Assets.xcassets in Resources */,
 				EA66918824B213060085210A /* Main.storyboard in Resources */,
 			);
@@ -353,10 +380,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA23AACC24C097E100C5AE18 /* CategoryCell.swift in Sources */,
+				EAD751C124C4CE0500090A56 /* MenuBarViewCell.swift in Sources */,
 				EA8C418B24B22D4D00BE2684 /* MenuModel.swift in Sources */,
 				EA8C418424B2297E00BE2684 /* HomeApi.swift in Sources */,
 				EA8C418224B2293100BE2684 /* HomeModel.swift in Sources */,
 				EA8C418D24B22DB300BE2684 /* HomeRepoService.swift in Sources */,
+				EAD751C424C4E55A00090A56 /* ItemOneViewController.swift in Sources */,
 				EACC6A8A24BF746C00949006 /* ItemCell.swift in Sources */,
 				EA3FE70E24BF3A0A009F20F5 /* BaseService.swift in Sources */,
 				EA3FE70A24BE18E5009F20F5 /* CoronaDataApi.swift in Sources */,
@@ -364,11 +393,14 @@
 				EA66918524B213060085210A /* HomeViewController.swift in Sources */,
 				EA8C419124B23E9200BE2684 /* ExtentionsFile.swift in Sources */,
 				EA3FE70C24BE23E4009F20F5 /* CoronaDataModel.swift in Sources */,
+				EAD751BE24C4CB2900090A56 /* OnBoardViewController.swift in Sources */,
 				EA66918124B213060085210A /* AppDelegate.swift in Sources */,
 				EA3FE71224BF588A009F20F5 /* CategoryModel.swift in Sources */,
 				EA8C418924B22CA400BE2684 /* AppUrls.swift in Sources */,
 				EA66918324B213060085210A /* SceneDelegate.swift in Sources */,
 				EA8C418624B22C0E00BE2684 /* MenuApi.swift in Sources */,
+				EAD751C624C4EC7200090A56 /* ItemTwoViewController.swift in Sources */,
+				1A3EC63B24C462770043D54E /* ExtStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

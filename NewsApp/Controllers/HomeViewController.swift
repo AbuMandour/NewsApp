@@ -105,9 +105,10 @@ extension HomeViewController :  UITableViewDelegate , UITableViewDataSource {
             categoryCell.innerTableViewHeight.constant = CGFloat(self.categories[indexPath.row].items.count * 48)
         }
         else{
-                categoryCell.innerTableView.isHidden = true
+            categoryCell.innerTableView.isHidden = true
                 categoryCell.innerTableViewHeight.constant = CGFloat(1)
         }
+     
         return categoryCell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -126,4 +127,11 @@ extension HomeViewController : UITabBarControllerDelegate{
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         //viewController.expandableTableView.reloadData()
     }
+//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+//        if (tabBarController.selectedIndex == HomeViewController.index() {
+//            let homeViewController = viewController as! HomeViewController
+//            HomeViewController.active
+//        }
+//        return true
+//    }
 }

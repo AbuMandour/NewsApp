@@ -17,21 +17,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puc-n9-i4Y">
-                        <rect key="frame" x="139" y="2" width="42" height="40"/>
+                        <rect key="frame" x="20" y="2" width="280" height="40"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="9pC-28-HOe"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.8784313725490196" green="0.1933326198630137" blue="0.46759952910958902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="puc-n9-i4Y" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="01d-Jm-JNm"/>
                     <constraint firstItem="puc-n9-i4Y" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2OJ-qV-Cc0"/>
+                    <constraint firstItem="puc-n9-i4Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="L3p-jg-qLa"/>
+                    <constraint firstAttribute="trailing" secondItem="puc-n9-i4Y" secondAttribute="trailing" constant="20" id="dfy-bZ-ilA"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="itemTextLabel" destination="puc-n9-i4Y" id="14x-1m-dab"/>
