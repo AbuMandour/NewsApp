@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
         performRepeatedFunction()
         updateData()
         setupTable()
+        self.tabBarController?.delegate = self
     }
     func setupTable() {
         expandableTableView.delegate = self
@@ -117,5 +118,12 @@ extension HomeViewController :  UITableViewDelegate , UITableViewDataSource {
             selectedIndexPathSet.insert(indexPath.row)
         }
         expandableTableView.reloadRows(at: [indexPath], with: .automatic)
+    }
+}
+
+//MARK: tab bar view controller
+extension HomeViewController : UITabBarControllerDelegate{
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        //viewController.expandableTableView.reloadData()
     }
 }
