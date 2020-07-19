@@ -13,6 +13,7 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var innerTableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var categoryTextLabel: UILabel!
     @IBOutlet weak var innerTableView: UITableView!
+    @IBOutlet weak var stMain: UIStackView!
     var items: [String] = [String]()
     var isCategorySelected: Bool = false
     override func awakeFromNib() {
@@ -21,15 +22,14 @@ class CategoryCell: UITableViewCell {
         innerTableView.dataSource = self
         innerTableView.isHidden = true
         innerTableViewHeight.constant = CGFloat(0)
+        innerTableView.backgroundColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1)
         innerTableView.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "itemCellIdentifier")
+        stMain.customize(backgroundColor: UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1), radiusSize: 8)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
 }
 extension CategoryCell : UITableViewDelegate ,UITableViewDataSource{
     

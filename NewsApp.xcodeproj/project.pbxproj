@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3EC63B24C462770043D54E /* ExtStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EC63A24C462770043D54E /* ExtStackView.swift */; };
 		AC6F9D58DD8234D5625A5A40 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF74E4D62C0C7CC79B7FDB1 /* Pods_NewsApp.framework */; };
 		EA23AACC24C097E100C5AE18 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA23AACA24C097E100C5AE18 /* CategoryCell.swift */; };
 		EA23AACD24C097E100C5AE18 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA23AACB24C097E100C5AE18 /* CategoryCell.xib */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3EC63A24C462770043D54E /* ExtStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtStackView.swift; sourceTree = "<group>"; };
 		424E310FE1E4428EA6AD36C6 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 		7BF74E4D62C0C7CC79B7FDB1 /* Pods_NewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCB5F827C150A7AD10A4A38 /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */,
+				1A3EC63A24C462770043D54E /* ExtStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				EA8C418924B22CA400BE2684 /* AppUrls.swift in Sources */,
 				EA66918324B213060085210A /* SceneDelegate.swift in Sources */,
 				EA8C418624B22C0E00BE2684 /* MenuApi.swift in Sources */,
+				1A3EC63B24C462770043D54E /* ExtStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

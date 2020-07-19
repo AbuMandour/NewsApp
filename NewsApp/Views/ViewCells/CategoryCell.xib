@@ -9,45 +9,60 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCellIdentifire" rowHeight="111" id="KGk-i7-Jjw" customClass="CategoryCell" customModule="NewsApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="321" height="111"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCellIdentifire" rowHeight="108" id="KGk-i7-Jjw" customClass="CategoryCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="299" height="108"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="321" height="111"/>
+                <rect key="frame" x="0.0" y="0.0" width="299" height="108"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDo-yH-n3W">
-                        <rect key="frame" x="10" y="10" width="301" height="73"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tbp-EO-Nw8">
-                        <rect key="frame" x="10" y="91" width="281" height="1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="epS-aS-JPy">
+                        <rect key="frame" x="10" y="10" width="279" height="36.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDo-yH-n3W">
+                                <rect key="frame" x="15" y="0.0" width="249" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7a2-5s-gb4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tbp-EO-Nw8">
+                                <rect key="frame" x="15" y="35.5" width="249" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="of7-N2-kJ5"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" constant="1" id="of7-N2-kJ5"/>
+                            <constraint firstAttribute="trailing" secondItem="rDo-yH-n3W" secondAttribute="trailing" constant="15" id="8uH-8e-cSv"/>
+                            <constraint firstItem="rDo-yH-n3W" firstAttribute="leading" secondItem="epS-aS-JPy" secondAttribute="leading" constant="15" id="NG5-Vh-Uxa"/>
+                            <constraint firstItem="tbp-EO-Nw8" firstAttribute="top" secondItem="rDo-yH-n3W" secondAttribute="bottom" constant="15" id="eyp-fF-uyy"/>
                         </constraints>
-                    </tableView>
+                    </stackView>
                 </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="tbp-EO-Nw8" firstAttribute="top" secondItem="rDo-yH-n3W" secondAttribute="bottom" constant="8" id="6U2-aW-A93"/>
-                    <constraint firstAttribute="bottom" secondItem="tbp-EO-Nw8" secondAttribute="bottom" constant="19" id="95y-1v-W68"/>
-                    <constraint firstAttribute="trailing" secondItem="tbp-EO-Nw8" secondAttribute="trailing" constant="30" id="ILl-PY-g9H"/>
-                    <constraint firstItem="rDo-yH-n3W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Iiw-Zq-sjw"/>
-                    <constraint firstItem="rDo-yH-n3W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="UMh-B3-Apy"/>
-                    <constraint firstAttribute="trailing" secondItem="rDo-yH-n3W" secondAttribute="trailing" constant="10" id="dy5-rA-mFD"/>
-                    <constraint firstItem="tbp-EO-Nw8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="y8d-Pm-76E"/>
+                    <constraint firstAttribute="trailing" secondItem="epS-aS-JPy" secondAttribute="trailing" constant="10" id="8Xi-x6-dix"/>
+                    <constraint firstAttribute="bottom" secondItem="epS-aS-JPy" secondAttribute="bottom" constant="5" id="JoH-Lj-3sC"/>
+                    <constraint firstItem="epS-aS-JPy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="PbS-m7-B8K"/>
+                    <constraint firstItem="epS-aS-JPy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="w8h-ZE-Jwv"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.24313725489999999" green="0.36078431370000003" blue="0.60392156860000001" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="categoryTextLabel" destination="rDo-yH-n3W" id="5gw-oW-e6n"/>
                 <outlet property="innerTableView" destination="tbp-EO-Nw8" id="rbB-Vc-4tP"/>
                 <outlet property="innerTableViewHeight" destination="of7-N2-kJ5" id="ibM-us-fqC"/>
+                <outlet property="stMain" destination="epS-aS-JPy" id="YYU-1a-qaY"/>
             </connections>
-            <point key="canvasLocation" x="131.15942028985509" y="108.81696428571428"/>
+            <point key="canvasLocation" x="115.21739130434783" y="107.8125"/>
         </tableViewCell>
     </objects>
 </document>

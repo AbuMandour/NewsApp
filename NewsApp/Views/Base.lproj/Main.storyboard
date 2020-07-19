@@ -47,8 +47,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DGZ-xI-VVz" customClass="ExpandableTableView" customModule="ExpandableCell">
-                                <rect key="frame" x="0.0" y="180" width="414" height="682"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DGZ-xI-VVz" customClass="ExpandableTableView" customModule="ExpandableCell">
+                                <rect key="frame" x="5" y="180" width="404" height="672"/>
                                 <sections/>
                             </tableView>
                         </subviews>
@@ -56,11 +56,11 @@
                         <constraints>
                             <constraint firstItem="oPd-wo-lWn" firstAttribute="top" secondItem="Kam-QS-pte" secondAttribute="bottom" constant="15" id="0Vi-jc-yNn"/>
                             <constraint firstItem="Kam-QS-pte" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AjP-vd-0mF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DGZ-xI-VVz" secondAttribute="trailing" id="KfH-OP-9TR"/>
                             <constraint firstItem="oPd-wo-lWn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MlG-so-JFJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DGZ-xI-VVz" secondAttribute="bottom" id="aEH-Im-oO9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DGZ-xI-VVz" secondAttribute="bottom" constant="10" id="aEH-Im-oO9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kam-QS-pte" secondAttribute="trailing" id="g6V-lb-Y22"/>
-                            <constraint firstItem="DGZ-xI-VVz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hRT-Tg-6sp"/>
+                            <constraint firstItem="DGZ-xI-VVz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="hRT-Tg-6sp"/>
+                            <constraint firstItem="DGZ-xI-VVz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-5" id="j6y-FF-WAP"/>
                             <constraint firstItem="Kam-QS-pte" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nBB-RN-nKI"/>
                             <constraint firstItem="DGZ-xI-VVz" firstAttribute="top" secondItem="oPd-wo-lWn" secondAttribute="bottom" constant="15" id="wHB-uT-xo1"/>
                         </constraints>
