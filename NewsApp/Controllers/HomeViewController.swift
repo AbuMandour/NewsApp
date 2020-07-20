@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
     func setupTable() {
         expandableTableView.delegate = self
         expandableTableView.dataSource = self
-        expandableTableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: "categoryCellIdentifire")
+        expandableTableView.register(CategoryCell.nib(), forCellReuseIdentifier: CategoryCell.identifier)
     }
     @IBAction func pickVideoClicked(_ sender: Any) {
         openVideoPicker()
@@ -92,11 +92,12 @@ extension HomeViewController :  UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let categoryCell = expandableTableView.dequeueReusableCell(withIdentifier: "categoryCellIdentifire", for: indexPath) as? CategoryCell else{
+        guard let categoryCell = expandableTableView.dequeueReusableCell(withIdentifier: CategoryCell.identifier, for: indexPath) as? CategoryCell else{
             print("faild to cast")
             return CategoryCell()
         }
         categoryCell.categoryTextLabel.text = categories[indexPath.row].title
+        categoryCell.configure(with: categories[indexPath.row].title)
         categoryCell.selectionStyle = .none
         categoryCell.items = self.categories[indexPath.row].items
         if selectedIndexPathSet.contains(indexPath.row){                

@@ -14,6 +14,7 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var categoryTextLabel: UILabel!
     @IBOutlet weak var innerTableView: UITableView!
     @IBOutlet weak var stMain: UIStackView!
+    static let identifier = "categoryCellIdentifire"
     var items: [String] = [String]()
     var isCategorySelected: Bool = false
     override func awakeFromNib() {
@@ -41,5 +42,13 @@ extension CategoryCell : UITableViewDelegate ,UITableViewDataSource{
         let itemCell = tableView.dequeueReusableCell(withIdentifier: "itemCellIdentifier", for: indexPath) as! ItemCell
         itemCell.itemTextLabel.text = items[indexPath.row]        
         return itemCell
+    }
+    
+    func configure(with categoryText:String)   {
+        self.categoryTextLabel.text = categoryText
+    }
+    static func nib () -> UINib
+    {
+        return UINib(nibName: "CategoryCell", bundle: nil)
     }
 }
