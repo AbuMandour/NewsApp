@@ -36,6 +36,8 @@
 		EAD751C224C4CE0500090A56 /* MenuBarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD751C024C4CE0500090A56 /* MenuBarViewCell.xib */; };
 		EAD751C424C4E55A00090A56 /* ItemOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751C324C4E55A00090A56 /* ItemOneViewController.swift */; };
 		EAD751C624C4EC7200090A56 /* ItemTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751C524C4EC7200090A56 /* ItemTwoViewController.swift */; };
+		EAD751C924C5B2F900090A56 /* CalendarPopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD751C724C5B2F800090A56 /* CalendarPopUpView.xib */; };
+		EAD751CA24C5B2F900090A56 /* CalendarPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751C824C5B2F900090A56 /* CalendarPopUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		EAD751C024C4CE0500090A56 /* MenuBarViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuBarViewCell.xib; sourceTree = "<group>"; };
 		EAD751C324C4E55A00090A56 /* ItemOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemOneViewController.swift; sourceTree = "<group>"; };
 		EAD751C524C4EC7200090A56 /* ItemTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTwoViewController.swift; sourceTree = "<group>"; };
+		EAD751C724C5B2F800090A56 /* CalendarPopUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarPopUpView.xib; sourceTree = "<group>"; };
+		EAD751C824C5B2F900090A56 /* CalendarPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPopUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 		EA8C417824B2275200BE2684 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EAD751CB24C5B5FF00090A56 /* PopupViews */,
 				EAD751BC24C4CA0B00090A56 /* Storyborads */,
 				EACC6A7F24BF5C5E00949006 /* ViewCells */,
 			);
@@ -261,6 +266,15 @@
 			path = Storyborads;
 			sourceTree = "<group>";
 		};
+		EAD751CB24C5B5FF00090A56 /* PopupViews */ = {
+			isa = PBXGroup;
+			children = (
+				EAD751C824C5B2F900090A56 /* CalendarPopUpView.swift */,
+				EAD751C724C5B2F800090A56 /* CalendarPopUpView.xib */,
+			);
+			path = PopupViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -325,6 +339,7 @@
 				EA66918D24B213080085210A /* LaunchScreen.storyboard in Resources */,
 				EACC6A8B24BF746C00949006 /* ItemCell.xib in Resources */,
 				EAD751C224C4CE0500090A56 /* MenuBarViewCell.xib in Resources */,
+				EAD751C924C5B2F900090A56 /* CalendarPopUpView.xib in Resources */,
 				EA66918A24B213080085210A /* Assets.xcassets in Resources */,
 				EA66918824B213060085210A /* Main.storyboard in Resources */,
 			);
@@ -397,6 +412,7 @@
 				EA66918124B213060085210A /* AppDelegate.swift in Sources */,
 				EA3FE71224BF588A009F20F5 /* CategoryModel.swift in Sources */,
 				EA8C418924B22CA400BE2684 /* AppUrls.swift in Sources */,
+				EAD751CA24C5B2F900090A56 /* CalendarPopUpView.swift in Sources */,
 				EA66918324B213060085210A /* SceneDelegate.swift in Sources */,
 				EA8C418624B22C0E00BE2684 /* MenuApi.swift in Sources */,
 				EAD751C624C4EC7200090A56 /* ItemTwoViewController.swift in Sources */,

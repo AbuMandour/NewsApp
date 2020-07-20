@@ -13,5 +13,7 @@ target 'NewsApp' do
 	pod 'ObjectMapper'
 
 	pod 'AlamofireObjectMapper', :git => 'https://github.com/RomanPodymov/AlamofireObjectMapper.git', :branch => 'xcode-10-2-fix'
+	
+	pod 'VACalendar'
 
 end
