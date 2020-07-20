@@ -86,13 +86,22 @@
                                     <action selector="selectDayClick:" destination="Nm4-h4-vfc" eventType="touchUpInside" id="4HG-nb-Y34"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hafez" translatesAutoresizingMaskIntoConstraints="NO" id="rJN-vX-Ydh">
+                                <rect key="frame" x="157" y="198" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6c8-h3-s2K"/>
+                                    <constraint firstAttribute="height" constant="100" id="fdv-N0-sa6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="rJN-vX-Ydh" firstAttribute="centerY" secondItem="OQs-0D-DZ3" secondAttribute="centerY" constant="-200" id="13f-1o-eza"/>
                             <constraint firstItem="NaI-uM-Otz" firstAttribute="leading" secondItem="Bjv-fR-iT2" secondAttribute="leading" id="275-PF-wKS"/>
                             <constraint firstItem="Bjv-fR-iT2" firstAttribute="trailing" secondItem="NaI-uM-Otz" secondAttribute="trailing" id="CmM-kH-Xvf"/>
                             <constraint firstItem="Bjv-fR-iT2" firstAttribute="trailing" secondItem="twY-0W-3KA" secondAttribute="trailing" constant="10" id="Dxk-KG-mKZ"/>
                             <constraint firstItem="twY-0W-3KA" firstAttribute="centerX" secondItem="OQs-0D-DZ3" secondAttribute="centerX" id="Gg2-9y-kpy"/>
+                            <constraint firstItem="rJN-vX-Ydh" firstAttribute="centerX" secondItem="OQs-0D-DZ3" secondAttribute="centerX" id="Pd8-eg-yCe"/>
                             <constraint firstItem="twY-0W-3KA" firstAttribute="leading" secondItem="Bjv-fR-iT2" secondAttribute="leading" constant="10" id="lmR-vr-e9a"/>
                             <constraint firstItem="twY-0W-3KA" firstAttribute="top" secondItem="Bjv-fR-iT2" secondAttribute="top" constant="10" id="w7e-iN-nXM"/>
                             <constraint firstItem="NaI-uM-Otz" firstAttribute="top" secondItem="twY-0W-3KA" secondAttribute="bottom" constant="20" id="yIH-s8-S8R"/>
@@ -101,6 +110,7 @@
                     </view>
                     <connections>
                         <outlet property="dayLabel" destination="twY-0W-3KA" id="6sn-0E-Q71"/>
+                        <outlet property="imgProfile" destination="rJN-vX-Ydh" id="biB-Dg-pxf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GlH-W8-1lR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -226,4 +236,7 @@
             <point key="canvasLocation" x="232" y="350"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hafez" width="1163" height="1175"/>
+    </resources>
 </document>
