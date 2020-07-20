@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
         performRepeatedFunction()
         updateData()
         setupTable()
-        
+        self.tabBarController?.delegate = self
     }
     func setupTable() {
         expandableTableView.delegate = self
@@ -121,4 +121,18 @@ extension HomeViewController :  UITableViewDelegate , UITableViewDataSource {
         }
         expandableTableView.reloadRows(at: [indexPath], with: .automatic)
     }
+}
+
+//MARK: tab bar view controller
+extension HomeViewController : UITabBarControllerDelegate{
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        //viewController.expandableTableView.reloadData()
+    }
+//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+//        if (tabBarController.selectedIndex == HomeViewController.index() {
+//            let homeViewController = viewController as! HomeViewController
+//            HomeViewController.active
+//        }
+//        return true
+//    }
 }
