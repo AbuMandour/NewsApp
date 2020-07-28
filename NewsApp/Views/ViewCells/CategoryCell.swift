@@ -22,6 +22,7 @@ class CategoryCell: UITableViewCell {
         innerTableView.delegate = self
         innerTableView.dataSource = self
         innerTableView.isHidden = true
+        categoryTextLabel.font = DesignSystem.Typography.display1.font
         innerTableViewHeight.constant = CGFloat(0)
         innerTableView.backgroundColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1)
         innerTableView.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "itemCellIdentifier")

@@ -15,6 +15,7 @@ class OnBoradViewController: BaseViewController{
     let menuItems: [String] = ["menu item 1" , "menu item 2" , "menu item 3" , "menu item 4" ,"menu item 5" , "menu item 6","menu item 7"]
     
     override func viewDidLoad() {
+        containerView.backgroundColor = DesignSystem.Colors.primary.color
         menuBarCollectionView.delegate = self
         menuBarCollectionView.dataSource = self
         menuBarCollectionView.showsHorizontalScrollIndicator = false

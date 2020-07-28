@@ -9,9 +9,10 @@
 import UIKit
 
 class ItemOneViewController: UIViewController {
-
+    
     @IBOutlet weak var dayLabel: UILabel!
     
+    @IBOutlet weak var imgProfile: UIImageView!
     private let formatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "E dd LLLL"
@@ -34,13 +35,13 @@ class ItemOneViewController: UIViewController {
         calendar.didSelectDay = { [weak self] date in
             self?.setSelectedDate(date)
         }
-
+        
         return calendar
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        circularImageSetup()
         // Do any additional setup after loading the view.
     }
     @IBAction func selectDayClick(_ sender: UIButton) {
@@ -54,5 +55,10 @@ class ItemOneViewController: UIViewController {
     }
     private func setSelectedDate(_ date: Date) {
         dayLabel.text = formatter.string(from: date)
+    }
+     private func circularImageSetup ()
+    {
+        self.imgProfile.layer.cornerRadius = self.imgProfile.frame.size.width/2
+        self.imgProfile.clipsToBounds = true;
     }
 }
