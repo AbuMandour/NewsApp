@@ -8,8 +8,7 @@
 
 import UIKit
 
-
-class OnBoradViewController: UIViewController{
+class OnBoradViewController: BaseViewController{
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var menuBarCollectionView: UICollectionView!
@@ -59,68 +58,64 @@ extension OnBoradViewController : UICollectionViewDelegate , UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedItem = menuItems[indexPath.row]
         if selectedItem == "menu item 1"{
-            guard let itemOneViewController  = storyboard?.instantiateViewController(withIdentifier: "ItemOneViewControllerID") as? ItemOneViewController else{
+            guard let itemOneViewController  = storyboard?.instantiateViewController(withIdentifier: "ItemOneViewControllerID") as? ItemOneViewController else {
                 fatalError("Failed to laod view controller")
             }
-            self.addChild(itemOneViewController)
-            containerView.addSubview(itemOneViewController.view)
-            itemOneViewController.didMove(toParent: self)
+            self.install(itemOneViewController,containerView)
         }
         else if selectedItem == "menu item 2"{
             guard let itemTwoViewController  = storyboard?.instantiateViewController(withIdentifier: "ItemTwoViewControllerID") as? ItemTwoViewController else{
                 fatalError("Failed to laod view controller")
             }
-            self.addChild(itemTwoViewController)
-            containerView.addSubview(itemTwoViewController.view)
-            itemTwoViewController.didMove(toParent: self)
-            itemTwoViewController.mainLabel.text = "menu item 2"
+            var timer = Timer()
+            timer.invalidate()
+            timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(setViewController(_:)), userInfo: itemTwoViewController, repeats: true)
+            self.state = .loading(message: "please wait")
+            //self.install(itemTwoViewController,containerView)
         }
         else if selectedItem == "menu item 3"{
             guard let itemTwoViewController  = storyboard?.instantiateViewController(withIdentifier: "ItemTwoViewControllerID") as? ItemTwoViewController else{
                 fatalError("Failed to laod view controller")
             }
-            self.addChild(itemTwoViewController)
-            containerView.addSubview(itemTwoViewController.view)
-            itemTwoViewController.didMove(toParent: self)
+            self.install(itemTwoViewController,containerView)
             itemTwoViewController.mainLabel.text = "menu item 3"
         }
         else if selectedItem == "menu item 4"{
             guard let itemTwoViewController  = storyboard?.instantiateViewController(withIdentifier: "ItemTwoViewControllerID") as? ItemTwoViewController else{
                 fatalError("Failed to laod view controller")
             }
-            
-            self.addChild(itemTwoViewController)
-            containerView.addSubview(itemTwoViewController.view)
-            itemTwoViewController.didMove(toParent: self)
+            self.install(itemTwoViewController,containerView)
             itemTwoViewController.mainLabel.text = "menu item 4"
         }
         else if selectedItem == "menu item 5"{
             guard let itemTwoViewController  = storyboard?.instantiateViewController(withIdentifier: "ItemTwoViewControllerID") as? ItemTwoViewController else{
                 fatalError("Failed to laod view controller")
             }
-            self.addChild(itemTwoViewController)
-            containerView.addSubview(itemTwoViewController.view)
-            itemTwoViewController.didMove(toParent: self)
+            self.install(itemTwoViewController,containerView)
             itemTwoViewController.mainLabel.text = "menu item 5"
         }
         else if selectedItem == "menu item 6"{
             guard let itemTwoViewController  = storyboard?.instantiateViewController(withIdentifier: "ItemTwoViewControllerID") as? ItemTwoViewController else{
                 fatalError("Failed to laod view controller")
             }
-            self.addChild(itemTwoViewController)
-            containerView.addSubview(itemTwoViewController.view)
-            itemTwoViewController.didMove(toParent: self)
+            self.install(itemTwoViewController,containerView)
             itemTwoViewController.mainLabel.text = "menu item 6"
         }
         else if selectedItem == "menu item 7"{
             guard let itemTwoViewController  = storyboard?.instantiateViewController(withIdentifier: "ItemTwoViewControllerID") as? ItemTwoViewController else{
                 fatalError("Failed to laod view controller")
             }
-            self.addChild(itemTwoViewController)
-            containerView.addSubview(itemTwoViewController.view)
-            itemTwoViewController.didMove(toParent: self)
+            self.install(itemTwoViewController,containerView)
             itemTwoViewController.mainLabel.text = "menu item 7"
         }
+    }
+    @objc func setViewController(_ timer: Timer) {
+                
+        guard let viewController = timer.userInfo as? ItemTwoViewController else {
+            fatalError()
+        }
+        self.state = .content(controller: viewController)
+        viewController.mainLabel.text = "menu item 2"
     }
 }
 

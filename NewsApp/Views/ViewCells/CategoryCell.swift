@@ -39,6 +39,9 @@ extension CategoryCell : UITableViewDelegate ,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let team = CategoryModel("team", ["player1","player2"], true)
+        team.addToFavoirte()
         let itemCell = tableView.dequeueReusableCell(withIdentifier: "itemCellIdentifier", for: indexPath) as! ItemCell
         itemCell.itemTextLabel.text = items[indexPath.row]        
         return itemCell

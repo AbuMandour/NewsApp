@@ -29,6 +29,8 @@
 		EA8C418D24B22DB300BE2684 /* HomeRepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C418C24B22DB300BE2684 /* HomeRepoService.swift */; };
 		EA8C418F24B23DD200BE2684 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C418E24B23DD200BE2684 /* HomeService.swift */; };
 		EA8C419124B23E9200BE2684 /* ExtentionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */; };
+		EAAD864324CE2D8F00DE883E /* StateViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAD864224CE2D8F00DE883E /* StateViewController.framework */; };
+		EAAD864424CE2D8F00DE883E /* StateViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAAD864224CE2D8F00DE883E /* StateViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EACC6A8A24BF746C00949006 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC6A8824BF746C00949006 /* ItemCell.swift */; };
 		EACC6A8B24BF746C00949006 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACC6A8924BF746C00949006 /* ItemCell.xib */; };
 		EAD751BE24C4CB2900090A56 /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751BD24C4CB2900090A56 /* OnBoardViewController.swift */; };
@@ -38,7 +40,25 @@
 		EAD751C624C4EC7200090A56 /* ItemTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751C524C4EC7200090A56 /* ItemTwoViewController.swift */; };
 		EAD751C924C5B2F900090A56 /* CalendarPopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD751C724C5B2F800090A56 /* CalendarPopUpView.xib */; };
 		EAD751CA24C5B2F900090A56 /* CalendarPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751C824C5B2F900090A56 /* CalendarPopUpView.swift */; };
+		EAD751CE24C5E6AD00090A56 /* Favoritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751CD24C5E6AD00090A56 /* Favoritable.swift */; };
+		EAD751D024C7CED600090A56 /* ExtUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751CF24C7CED600090A56 /* ExtUIViewController.swift */; };
+		EAD751D224C7D3AD00090A56 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751D124C7D3AD00090A56 /* BaseViewController.swift */; };
+		EAD751D424C7D40A00090A56 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD751D324C7D40A00090A56 /* MessageViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EAAD864524CE2D8F00DE883E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EAAD864424CE2D8F00DE883E /* StateViewController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1A3EC63A24C462770043D54E /* ExtStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtStackView.swift; sourceTree = "<group>"; };
@@ -67,6 +87,8 @@
 		EA8C418C24B22DB300BE2684 /* HomeRepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepoService.swift; sourceTree = "<group>"; };
 		EA8C418E24B23DD200BE2684 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionsFile.swift; sourceTree = "<group>"; };
+		EAAD864024CE27A500DE883E /* StateViewController */ = {isa = PBXFileReference; lastKnownFileType = folder; name = StateViewController; path = Carthage/Checkouts/StateViewController; sourceTree = "<group>"; };
+		EAAD864224CE2D8F00DE883E /* StateViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StateViewController.framework; path = Carthage/Build/iOS/StateViewController.framework; sourceTree = "<group>"; };
 		EACC6A8824BF746C00949006 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		EACC6A8924BF746C00949006 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		EAD751BD24C4CB2900090A56 /* OnBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +98,10 @@
 		EAD751C524C4EC7200090A56 /* ItemTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTwoViewController.swift; sourceTree = "<group>"; };
 		EAD751C724C5B2F800090A56 /* CalendarPopUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarPopUpView.xib; sourceTree = "<group>"; };
 		EAD751C824C5B2F900090A56 /* CalendarPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPopUpView.swift; sourceTree = "<group>"; };
+		EAD751CD24C5E6AD00090A56 /* Favoritable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favoritable.swift; sourceTree = "<group>"; };
+		EAD751CF24C7CED600090A56 /* ExtUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIViewController.swift; sourceTree = "<group>"; };
+		EAD751D124C7D3AD00090A56 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EAD751D324C7D40A00090A56 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC6F9D58DD8234D5625A5A40 /* Pods_NewsApp.framework in Frameworks */,
+				EAAD864324CE2D8F00DE883E /* StateViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +129,8 @@
 		A1ACF35346910F8C57BE7666 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAAD864224CE2D8F00DE883E /* StateViewController.framework */,
+				EAAD864024CE27A500DE883E /* StateViewController */,
 				7BF74E4D62C0C7CC79B7FDB1 /* Pods_NewsApp.framework */,
 			);
 			name = Frameworks;
@@ -128,6 +157,7 @@
 		EA66917F24B213060085210A /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				EAD751CC24C5E68600090A56 /* Protocals */,
 				EA8C418724B22C9100BE2684 /* Constants */,
 				EA8C418024B2288D00BE2684 /* Extensions */,
 				EA8C417F24B2287F00BE2684 /* CustomControls */,
@@ -151,6 +181,8 @@
 				EA66918024B213060085210A /* AppDelegate.swift */,
 				EA66918224B213060085210A /* SceneDelegate.swift */,
 				EA3FE70D24BF3A0A009F20F5 /* BaseService.swift */,
+				EAD751D124C7D3AD00090A56 /* BaseViewController.swift */,
+				EAD751D324C7D40A00090A56 /* MessageViewController.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -232,6 +264,7 @@
 			children = (
 				EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */,
 				1A3EC63A24C462770043D54E /* ExtStackView.swift */,
+				EAD751CF24C7CED600090A56 /* ExtUIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,6 +308,14 @@
 			path = PopupViews;
 			sourceTree = "<group>";
 		};
+		EAD751CC24C5E68600090A56 /* Protocals */ = {
+			isa = PBXGroup;
+			children = (
+				EAD751CD24C5E6AD00090A56 /* Favoritable.swift */,
+			);
+			path = Protocals;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,6 +328,8 @@
 				EA66917A24B213060085210A /* Frameworks */,
 				EA66917B24B213060085210A /* Resources */,
 				2FD7ACF29A31F3CAE40EFAC7 /* [CP] Embed Pods Frameworks */,
+				EAAD864124CE280600DE883E /* ShellScript */,
+				EAAD864524CE2D8F00DE883E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,6 +430,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewsApp/Pods-NewsApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EAAD864124CE280600DE883E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/StateViewController.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -395,9 +456,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA23AACC24C097E100C5AE18 /* CategoryCell.swift in Sources */,
+				EAD751D424C7D40A00090A56 /* MessageViewController.swift in Sources */,
 				EAD751C124C4CE0500090A56 /* MenuBarViewCell.swift in Sources */,
 				EA8C418B24B22D4D00BE2684 /* MenuModel.swift in Sources */,
+				EAD751CE24C5E6AD00090A56 /* Favoritable.swift in Sources */,
 				EA8C418424B2297E00BE2684 /* HomeApi.swift in Sources */,
+				EAD751D024C7CED600090A56 /* ExtUIViewController.swift in Sources */,
 				EA8C418224B2293100BE2684 /* HomeModel.swift in Sources */,
 				EA8C418D24B22DB300BE2684 /* HomeRepoService.swift in Sources */,
 				EAD751C424C4E55A00090A56 /* ItemOneViewController.swift in Sources */,
@@ -405,6 +469,7 @@
 				EA3FE70E24BF3A0A009F20F5 /* BaseService.swift in Sources */,
 				EA3FE70A24BE18E5009F20F5 /* CoronaDataApi.swift in Sources */,
 				EA8C418F24B23DD200BE2684 /* HomeService.swift in Sources */,
+				EAD751D224C7D3AD00090A56 /* BaseViewController.swift in Sources */,
 				EA66918524B213060085210A /* HomeViewController.swift in Sources */,
 				EA8C419124B23E9200BE2684 /* ExtentionsFile.swift in Sources */,
 				EA3FE70C24BE23E4009F20F5 /* CoronaDataModel.swift in Sources */,
@@ -478,6 +543,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -538,6 +604,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -563,6 +630,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9LSNZHURVS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -582,6 +653,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9LSNZHURVS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

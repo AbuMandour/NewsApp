@@ -8,7 +8,13 @@
 
 import Foundation
 
-class CategoryModel{
+class CategoryModel : Favoritable{
+    func addToFavoirte() -> Bool {        
+        //realm.add(self)
+        return false
+    }
+    
+    
     var opened: Bool
     var title: String
     var items: [String]
