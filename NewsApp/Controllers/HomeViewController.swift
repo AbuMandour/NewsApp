@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var expandableTableView: UITableView!
     @IBOutlet weak var lastQueryDateLabel: UILabel!
     @IBOutlet weak var autoUpdatedLabel: UILabel!
+    let coronaService = CoronaService()
+    let disposeBag = DisposeBag()
     var selectedIndexPathSet : IndexSet = []
     var categories: [CategoryModel] = [
         CategoryModel("title 1",["item 1,1","item 2,1","item 3,1","item 4,1"],false),
@@ -22,8 +25,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        performRepeatedFunction()
-        updateData()
+        subscribeCoronaLiveData()
         setupTable()
         self.tabBarController?.delegate = self
     }
@@ -35,23 +37,17 @@ class HomeViewController: UIViewController {
     @IBAction func pickVideoClicked(_ sender: Any) {
         openVideoPicker()
     }
-    func performRepeatedFunction(){
-        var timer = Timer()
-        timer.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
+    func subscribeCoronaLiveData() {
+        coronaService.coronaDataPublisher.observeOn(MainScheduler.instance)
+            .subscribe(onNext: { (coronaDataModel) in
+                self.autoUpdatedLabel.text = "Total Cases: \(coronaDataModel.totalCases ?? "0")"
+                self.lastQueryDateLabel.text = "Last check date: \(coronaDataModel.dateTimeNow ?? "no calls made")"
+            }, onError: { (error) in
+                print(error)
+            }, onCompleted: nil,
+               onDisposed: nil)
+            .disposed(by: disposeBag)
     }
-    @objc func updateData() {
-        HomeService.fetchCoronaData { (error, coronaDataModel) in
-            if(error == nil){
-
-                self.autoUpdatedLabel.text = "Total Cases: \(coronaDataModel?.totalCases ?? "0")"
-                self.lastQueryDateLabel.text = "Last check date: \(coronaDataModel?.dateTimeNow ?? "no calls made")"
-            }
-            else{
-                print(error!)
-            }
-        }
-     }
 }
 
 //MARK: Pick Video
@@ -116,7 +112,7 @@ extension HomeViewController :  UITableViewDelegate , UITableViewDataSource {
         if selectedIndexPathSet.contains(indexPath.row){
             selectedIndexPathSet.remove(indexPath.row)
         }
-        else{
+        else {
             selectedIndexPathSet.insert(indexPath.row)
         }
         expandableTableView.reloadRows(at: [indexPath], with: .automatic)

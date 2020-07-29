@@ -16,4 +16,9 @@ target 'NewsApp' do
 	
 	pod 'VACalendar'
 
+	pod 'RxSwift'
+
+	pod 'RxCocoa'
+
+	pod 'RxAlamofire'
 end

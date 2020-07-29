@@ -68,11 +68,7 @@ extension OnBoradViewController : UICollectionViewDelegate , UICollectionViewDat
             guard let itemTwoViewController  = storyboard?.instantiateViewController(withIdentifier: "ItemTwoViewControllerID") as? ItemTwoViewController else{
                 fatalError("Failed to laod view controller")
             }
-            var timer = Timer()
-            timer.invalidate()
-            timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(setViewController(_:)), userInfo: itemTwoViewController, repeats: true)
-            self.state = .loading(message: "please wait")
-            //self.install(itemTwoViewController,containerView)
+            self.install(itemTwoViewController,containerView)
         }
         else if selectedItem == "menu item 3"{
             guard let itemTwoViewController  = storyboard?.instantiateViewController(withIdentifier: "ItemTwoViewControllerID") as? ItemTwoViewController else{
@@ -109,14 +105,6 @@ extension OnBoradViewController : UICollectionViewDelegate , UICollectionViewDat
             self.install(itemTwoViewController,containerView)
             itemTwoViewController.mainLabel.text = "menu item 7"
         }
-    }
-    @objc func setViewController(_ timer: Timer) {
-                
-        guard let viewController = timer.userInfo as? ItemTwoViewController else {
-            fatalError()
-        }
-        self.state = .content(controller: viewController)
-        viewController.mainLabel.text = "menu item 2"
     }
 }
 

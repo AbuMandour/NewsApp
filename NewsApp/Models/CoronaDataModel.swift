@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CoronaDataModel {
+class CoronaDataModel : Decodable{
     var totalCases: String?
     var totalDeath: String?
     var dateTimeNow: String?

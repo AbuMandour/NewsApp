@@ -41,22 +41,4 @@ class HomeRepoService
             }
         }
     }
-    class func getCoronaLiveData(completion : @escaping(_ error: Error? ,_ success: Bool, _ data: CoronaDataApi?)->Void){
-        
-        let url = "https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php"
-        
-        let headers: HTTPHeaders = [
-            "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-            "x-rapidapi-key": "c96cd16232msh87b9d62245e6a34p180e99jsn98e759c21314"
-        ]
-        Alamofire.request(url, headers: headers).responseObject { (response: DataResponse<CoronaDataApi>) in
-            if(response.error != nil)
-            {
-                completion(response.error,false,nil)
-            }
-            else{
-                completion(nil,true,response.result.value)
-            }
-        }
-    }
 }

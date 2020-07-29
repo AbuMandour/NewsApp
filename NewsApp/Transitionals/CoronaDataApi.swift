@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class CoronaDataApi : Mappable {
+class CoronaDataApi : Decodable {
     var total_cases : String?
     var new_cases : String?
     var total_deaths : String?

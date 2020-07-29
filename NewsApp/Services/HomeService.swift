@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import AlamofireObjectMapper
+import RxSwift
+import RxCocoa
 
 class HomeService : BaseService
 {
@@ -56,22 +58,5 @@ class HomeService : BaseService
             lst.append(menuModel)
         }
         return lst
-    }
-    
-    //MARK: Corona Service
-    class func fetchCoronaData(completion : @escaping (_ error: Error? ,  _ data: CoronaDataModel?)->Void){
-        HomeRepoService.getCoronaLiveData { (error, success, repoData) in
-            if success{
-                completion(nil,self.toModel(repoData!))
-            }
-            else{
-                completion(error,nil)
-            }
-        }
-    }
-    class func toModel(_ coronaDataApi: CoronaDataApi)-> CoronaDataModel
-    {
-        let coronaDataModel: CoronaDataModel = CoronaDataModel(coronaDataApi.total_cases,coronaDataApi.total_deaths,getDateNow())
-        return coronaDataModel
     }
 }

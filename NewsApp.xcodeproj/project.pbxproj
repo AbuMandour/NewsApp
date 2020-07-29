@@ -34,6 +34,7 @@
 		EA8C418D24B22DB300BE2684 /* HomeRepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C418C24B22DB300BE2684 /* HomeRepoService.swift */; };
 		EA8C418F24B23DD200BE2684 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C418E24B23DD200BE2684 /* HomeService.swift */; };
 		EA8C419124B23E9200BE2684 /* ExtentionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */; };
+		EAA0FAB424D05D3F0000E72F /* CoronaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0FAB324D05D3F0000E72F /* CoronaService.swift */; };
 		EAAD864324CE2D8F00DE883E /* StateViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAD864224CE2D8F00DE883E /* StateViewController.framework */; };
 		EAAD864424CE2D8F00DE883E /* StateViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAAD864224CE2D8F00DE883E /* StateViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EACC6A8A24BF746C00949006 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC6A8824BF746C00949006 /* ItemCell.swift */; };
@@ -97,6 +98,7 @@
 		EA8C418C24B22DB300BE2684 /* HomeRepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepoService.swift; sourceTree = "<group>"; };
 		EA8C418E24B23DD200BE2684 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		EA8C419024B23E9200BE2684 /* ExtentionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionsFile.swift; sourceTree = "<group>"; };
+		EAA0FAB324D05D3F0000E72F /* CoronaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaService.swift; sourceTree = "<group>"; };
 		EAAD864024CE27A500DE883E /* StateViewController */ = {isa = PBXFileReference; lastKnownFileType = folder; name = StateViewController; path = Carthage/Checkouts/StateViewController; sourceTree = "<group>"; };
 		EAAD864224CE2D8F00DE883E /* StateViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StateViewController.framework; path = Carthage/Build/iOS/StateViewController.framework; sourceTree = "<group>"; };
 		EACC6A8824BF746C00949006 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				EA8C418E24B23DD200BE2684 /* HomeService.swift */,
+				EAA0FAB324D05D3F0000E72F /* CoronaService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				1AAB5AC024CF4F6C00EE3238 /* Colors.swift in Sources */,
 				EAD751C424C4E55A00090A56 /* ItemOneViewController.swift in Sources */,
 				EACC6A8A24BF746C00949006 /* ItemCell.swift in Sources */,
+				EAA0FAB424D05D3F0000E72F /* CoronaService.swift in Sources */,
 				EA3FE70E24BF3A0A009F20F5 /* BaseService.swift in Sources */,
 				EA3FE70A24BE18E5009F20F5 /* CoronaDataApi.swift in Sources */,
 				EA8C418F24B23DD200BE2684 /* HomeService.swift in Sources */,
